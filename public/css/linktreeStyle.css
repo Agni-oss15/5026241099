@@ -1,0 +1,86 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    margin-left: 100px;
+    background-color: rgb(96, 102, 102);
+}
+
+.linkFont {
+    color: rgb(0, 0, 0);
+}
+
+
+.profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 0, 0);
+    object-fit: cover;
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px 50px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    width: 520px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+}
+
+.logo-bawah {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.logonya {
+    max-width: 13%;
+    height: auto;
+}
+
+.shadow {
+    box-shadow: 5px 50px #888888;
+}
+
+.footer {
+    font-size: xx-small;
+}
+
+.before-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.logo-atas {
+    max-width: 100%;
+    height: auto;
+}

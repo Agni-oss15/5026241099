@@ -17,3 +17,39 @@ Route::get('blog', function () {
 
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('bio', [DosenController::class, 'biodata']);
+
+Route::get('pert5', function () {
+	return view('pertemuan5');
+});
+
+Route::get('ituindex', function () {
+	return view('index');
+});
+
+Route::get('itulinktree', function () {
+	return view('linktree');
+});
+
+Route::get('ituintro', function () {
+	return view('intro');
+});
+
+Route::get('itunews', function () {
+	return view('news');
+});
+
+Route::get('itunewslagi', function () {
+	return view('newsLagi');
+});
+
+Route::get('ituresponsive', function () {
+	return view('responsive');
+});
+
+Route::get('itutemplate', function () {
+	return view('template');
+});
+
+Route::get('menu', function () {
+	return view('all-menu');
+});
