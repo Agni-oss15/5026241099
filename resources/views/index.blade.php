@@ -17,13 +17,13 @@
         <center>
             <h1>5026241099 Naufal Agni Muhammad</h1>
             <p>
-                <a href="pertemuan5.html" target="_blank" class="btn btn-primary">
+                <a href="pert5" target="_blank" class="btn btn-primary">
                     Pertemuan 5
                 </a>
             </p>
 
             <p>
-                <a href="linktree.html" target="_blank" class="btn btn-primary">
+                <a href="itulinktree" target="_blank" class="btn btn-primary">
                     Tugas Link Tree
                 </a>
             </p>

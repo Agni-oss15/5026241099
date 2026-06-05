@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Bootstrap 4 Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <title>5026241099</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-
 <body>
 
-    <div class="container">
-
-    </div>
+<div class="container">
+<div class="mt-4 p-5 bg-primary text-white">
+  <h1>5026241099 Naufal Agni Muhammad</h1>
+  <p>@yield('judul halaman')</p>
+</div>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/pegawai">Pegawai</a>
+      </li>
+     <li class="nav-item">
+        <a class="nav-link" href="#">Nama tabel PR</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Siswa</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Latihan 1</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="#">Latihan 2</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="#">EAS</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+    @yield('konten')
+</div>
+</div>
 
 </body>
-
 </html>
