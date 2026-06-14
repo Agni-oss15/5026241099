@@ -7,7 +7,7 @@
         <div class="card-header">
             Form Tambah Barang
         </div>
-
+        <!-- Form sudah di makeover seperti pegawai -->
         <div class="card-body">
             <form action="/d4/store" method="post">
                 {{ csrf_field() }}

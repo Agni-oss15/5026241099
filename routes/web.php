@@ -8,6 +8,7 @@ use App\Http\Controllers\PegawaiDBController ;
 use App\Http\Controllers\berasDBController;
 use App\Http\Controllers\keranjangbelanja;
 use App\Http\Controllers\nilaikuliah;
+use App\Http\Controllers\SiswaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -105,3 +106,10 @@ Route::get('d4', [keranjangbelanja::class, 'index']);
 Route::get('d4/tambah', [keranjangbelanja::class, 'beli']);
 Route::post('d4/store', [keranjangbelanja::class, 'store']);
 Route::get('d4/hapus/{id}', [keranjangbelanja::class, 'hapus']);
+//siswa
+Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
+Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
+Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
+Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
+Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
+Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
