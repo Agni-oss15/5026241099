@@ -6,6 +6,8 @@ use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiDBController ;
 use App\Http\Controllers\berasDBController;
+use App\Http\Controllers\keranjangbelanja;
+use App\Http\Controllers\nilaikuliah;
 
 Route::get('/', function () {
     return view('welcome');
@@ -89,3 +91,17 @@ Route::post('/beras/store', [berasDBController::class, 'store']);
 Route::get('/beras/edit/{kode}', [berasDBController::class, 'edit']);
 Route::post('/beras/update', [berasDBController::class, 'update']);
 Route::get('/beras/hapus/{kode}', [berasDBController::class, 'hapus']);
+
+//e5
+Route::get('e5', [nilaikuliah::class, 'index']);
+Route::get('e5/tambah', [nilaikuliah::class, 'tambah']);
+Route::post('e5/store', [nilaikuliah::class, 'store']);
+Route::get('e5/edit/{id}', [nilaikuliah::class, 'edit']);
+Route::post('e5/update', [nilaikuliah::class, 'update']);
+Route::get('e5/hapus/{id}', [nilaikuliah::class, 'hapus']);
+Route::get('/e5/cari', [nilaikuliah::class, 'cari']);
+//d4
+Route::get('d4', [keranjangbelanja::class, 'index']);
+Route::get('d4/tambah', [keranjangbelanja::class, 'beli']);
+Route::post('d4/store', [keranjangbelanja::class, 'store']);
+Route::get('d4/hapus/{id}', [keranjangbelanja::class, 'hapus']);
