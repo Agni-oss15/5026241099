@@ -1,6 +1,7 @@
 @extends('template')
-@section('judul', 'Data pegawai')
+@section('judul', 'Kode Soal mypegawai')
 @section('konten')
+<a href="{{ route('mypegawai.index') }}" class="btn btn-secondary mb-4">Kembali</a>
 
     <h2>Tambah pegawai</h2>
 
@@ -18,33 +19,33 @@
         </div>
         <!-- Form sudah di makeover seperti pegawai -->
         <div class="card-body">
-    <form action="{{ route('pegawai.store') }}" method="post">
+    <form action="{{ route('mypegawai.store') }}" method="post">
                 {{ csrf_field() }}
                 {{ method_field('POST') }}
                 <!-- tidak menggunakan kode ikan saat menambah karena auto increment-->
                 <div class="row mb-3">
-                    <label for="jabatan" class="col-sm-2 col-form-label">NRP</label>
+                    <label for="jabatan" class="col-sm-2 col-form-label">kodepegawai</label>
                     <div class="col-sm-10">
-                        <input type="text" name="NRP" id="NRP" class="form-control" required>
+                        <input type="text" name="kodepegawai" id="kodepegawai" class="form-control" required>
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <label for="umur" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-10">
-                        <input type="text" name="Nama" id="Nama" class="form-control" required>
+                        <input type="text" name="namalengkap" id="namalengkap" class="form-control" required>
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <label for="umur" class="col-sm-2 col-form-label">Kelas</label>
+                    <label for="umur" class="col-sm-2 col-form-label">divisi</label>
                     <div class="col-sm-10">
-                        <input type="text" name="Kelas" id="Kelas" class="form-control" required>
+                        <input type="text" name="divisi" id="divisi" class="form-control" required>
                     </div>
                 </div><div class="row mb-3">
-                    <label for="umur" class="col-sm-2 col-form-label">Tanggal Lahir</label>
+                    <label for="umur" class="col-sm-2 col-form-label">departemen</label>
                     <div class="col-sm-10">
-                        <input type="date" name="TanggalLahir" id="TanggalLahir" class="form-control" required>
+                        <input type="text" name="departemen" id="departemen" class="form-control" required>
                     </div>
                 </div>
                 <div class="row">
@@ -58,30 +59,30 @@
     </div>
     <script>
         function validasiForm() {
-            let nrp = document.getElementById('NRP').value.trim();
-            let nama = document.getElementById('Nama').value.trim();
-            let kelas = document.getElementById('Kelas').value.trim();
-            let tanggal = document.getElementById('TanggalLahir').value;
+            let kodepegawai = document.getElementById('kodepegawai').value.trim();
+            let namalengkap = document.getElementById('namalengkap').value.trim();
+            let divisi = document.getElementById('divisi').value.trim();
+            let departemen = document.getElementById('departemen').value.trim();
 
-            if (nrp === '') {
+            if (kodepegawai === '') {
                 Swal.fire({
                     title: "Kesalahan Input Data!",
-                    text: "NRP wajib diisi",
+                    text: "kodepegawai wajib diisi",
                     icon: "error"
                 });
                 return false;
             }
 
-            if (nrp.length > 10) {
+            if (kodepegawai.length > 9) {
                 Swal.fire({
                     title: "Kesalahan Input Data!",
-                    text: "NRP maksimal 10 karakter",
+                    text: "kodepegawai maksimal 9 karakter",
                     icon: "error"
                 });
                 return false;
             }
 
-            if (nama === '') {
+            if (namalengkap === '') {
                 Swal.fire({
                     title: "Kesalahan Input Data!",
                     text: "Nama wajib diisi",
@@ -90,37 +91,37 @@
                 return false;
             }
 
-            if (nama.length > 20) {
+            if (namalengkap.length > 50) {
                 Swal.fire({
                     title: "Kesalahan Input Data!",
-                    text: "Nama maksimal 20 karakter",
+                    text: "Nama maksimal 50 karakter",
                     icon: "error"
                 });
                 return false;
             }
 
-            if (kelas === '') {
+            if (divisi === '') {
                 Swal.fire({
                     title: "Kesalahan Input Data!",
-                    text: "Kelas wajib diisi",
+                    text: "divisi wajib diisi",
                     icon: "error"
                 });
                 return false;
             }
 
-            if (kelas.length > 5) {
+            if (divisi.length > 5) {
                 Swal.fire({
                     title: "Kesalahan Input Data!",
-                    text: "Kelas maksimal 5 karakter",
+                    text: "divisi maksimal 5 karakter",
                     icon: "error"
                 });
                 return false;
             }
 
-            if (tanggal === '') {
+            if (departemen === '') {
                 Swal.fire({
                     title: "Kesalahan Input Data!",
-                    text: "Tanggal lahir wajib diisi",
+                    text: "departemen wajib diisi",
                     icon: "error"
                 });
                 return false;

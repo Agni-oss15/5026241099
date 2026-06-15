@@ -37,7 +37,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/eas">EAS</a>
                 </li>
-                
+
 
             </ul>
         </div>

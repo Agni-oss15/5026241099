@@ -11,6 +11,7 @@ use App\Http\Controllers\nilaikuliah;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\AnimeController;
 use App\Http\Controllers\WarkopController;
+use App\Http\Controllers\mypegawaiController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -131,3 +132,12 @@ Route::post('/warkop/store', [WarkopController::class, 'store']);
 Route::get('/warkop/edit/{kode}', [WarkopController::class, 'edit'])->name('warkop.edit');
 Route::put('/warkop/update/{kode}', [WarkopController::class, 'update'])->name('warkop.update');
 Route::get('/warkop/hapus/{kode}', [WarkopController::class, 'hapus']);
+
+Route::get('/eas', [mypegawaiController::class, 'index'])->name('mypegawai.index');
+Route::get('/eas/create', [mypegawaiController::class, 'create'])->name('mypegawai.create');
+Route::post('/eas', [mypegawaiController::class, 'store'])->name('mypegawai.store');
+Route::get('/eas/{kodepegawai}/edit', [mypegawaiController::class, 'edit'])->name('mypegawai.edit');
+Route::put('/eas/{kodepegawai}', [mypegawaiController::class, 'update'])->name('mypegawai.update');
+Route::delete('/eas/{kodepegawai}', [mypegawaiController::class, 'destroy'])->name('mypegawai.destroy');
+
+
