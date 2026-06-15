@@ -9,6 +9,8 @@ use App\Http\Controllers\berasDBController;
 use App\Http\Controllers\keranjangbelanja;
 use App\Http\Controllers\nilaikuliah;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\AnimeController;
+use App\Http\Controllers\WarkopController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -113,3 +115,19 @@ Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+Route::get('/anime', [AnimeController::class, 'indexanime']);
+Route::get('/anime/cari', [AnimeController::class, 'cari']);
+Route::get('/anime/tambah', [AnimeController::class, 'tambah']);
+Route::post('/anime/store', [AnimeController::class, 'store']);
+Route::get('/anime/edit/{kode}', [AnimeController::class, 'edit']);
+Route::post('/anime/update', [AnimeController::class, 'update']);
+Route::get('/anime/hapus/{kode}', [AnimeController::class, 'hapus']);
+
+Route::get('/warkop', [WarkopController::class, 'indexwarkop']);
+Route::get('/warkop/cari', [WarkopController::class, 'cari']);
+Route::get('/warkop/tambah', [WarkopController::class, 'tambah']);
+Route::post('/warkop/store', [WarkopController::class, 'store']);
+Route::get('/warkop/edit/{kode}', [WarkopController::class, 'edit'])->name('warkop.edit');
+Route::put('/warkop/update/{kode}', [WarkopController::class, 'update'])->name('warkop.update');
+Route::get('/warkop/hapus/{kode}', [WarkopController::class, 'hapus']);
